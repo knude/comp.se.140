@@ -1,0 +1,35 @@
+services:
+  service1:
+    build: ./service1
+    ports:
+      - "8199:8199"
+    networks:
+      - backend
+    depends_on:
+      - service2
+      - storage
+    volumes:
+      - ./vstorage:/vStorage
+
+  service2:
+    build: ./service2
+    networks:
+      - backend
+    volumes:
+      - ./vstorage:/vStorage
+    depends_on:
+      - storage
+  
+  storage:
+    build: ./storage
+    networks:
+      - backend
+    volumes:
+      - storage_data:/data
+
+networks:
+  backend:
+    driver: bridge
+
+volumes:
+  storage_data:

@@ -1,0 +1,28 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.17.2)
+    ffi (1.17.2-x86_64-linux-gnu)
+    json (2.13.2)
+    nio4r (2.7.4)
+    puma (6.6.1)
+      nio4r (~> 2.0)
+    rack (3.2.1)
+    rackup (2.2.1)
+      rack (>= 3)
+    sys-filesystem (1.5.4)
+      ffi (~> 1.1)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  json (~> 2.7)
+  puma (~> 6.4)
+  rack (~> 3.1)
+  rackup (~> 2.2)
+  sys-filesystem (~> 1.5)
+
+BUNDLED WITH
+   2.5.3

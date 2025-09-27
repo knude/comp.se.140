@@ -1,0 +1,10 @@
+topi@DESKTOP-URCV6S7:~/comp.se.140$ docker container ls
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+866b2c896812   compse140-service1   "docker-entrypoint.s…"   13 minutes ago   Up 13 minutes   0.0.0.0:8199->8199/tcp, :::8199->8199/tcp   compse140-service1-1
+63e0f0dab0e8   compse140-service2   "bundle exec rackup …"   13 minutes ago   Up 13 minutes                                               compse140-service2-1
+b32384121131   compse140-storage    "docker-entrypoint.s…"   13 minutes ago   Up 13 minutes   5702/tcp                                    compse140-storage-1
+topi@DESKTOP-URCV6S7:~/comp.se.140$ docker network ls
+NETWORK ID     NAME                         DRIVER    SCOPE
+859d60c36604   bridge                       bridge    local
+1dc90eb17f1f   compse140_backend            bridge    local
+8926f1a6663c   host                         host      local
